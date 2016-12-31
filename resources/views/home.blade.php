@@ -1,2 +1,3 @@
-@extends('layouts.admin.app')
+@extends('layouts.app')
 
+@section('title') Beranda @endsection

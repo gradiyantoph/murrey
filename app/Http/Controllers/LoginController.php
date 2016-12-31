@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 use App\User;
 use Auth;
 
@@ -21,7 +22,7 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
-	public function login(Request $request) {
+	public function login(LoginRequest $request) {
 		if(Auth::attempt(['username' => $request->get('username'), 'password' => $request->get('password')])) 
         {
 			if(Auth::user()->level == 'Cashier')
@@ -32,14 +33,17 @@ class LoginController extends Controller
 		}
 		else 
         {
-			return redirect('/login')->with('message','salah username atau salah password');
+			return redirect('/login')->with([
+                'message' => 'Salah username atau salah password.',
+                'alert-type' => 'alert-danger',
+            ]);
 		}
 	}
 	public function logout() {
 		Auth::logout();
 		return redirect('login')
             ->with([
-                'message' => 'berhasil keluar',
+                'message' => 'Berhasil keluar.',
                 'alert-type' => 'alert-success',
             ]);
 	}

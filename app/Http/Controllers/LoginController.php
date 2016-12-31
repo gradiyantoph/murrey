@@ -22,15 +22,25 @@ class LoginController extends Controller
         return view('auth.login');
     }
 	public function login(Request $request) {
-		if (Auth::attempt(['username' => $request->get('username'), 'password' => $request->get('password')])) {
-			return redirect('/home');
+		if(Auth::attempt(['username' => $request->get('username'), 'password' => $request->get('password')])) 
+        {
+			if(Auth::user()->level == 'Cashier')
+            {
+                return redirect('/home');
+            }
+            return redirect('/home');
 		}
-		else {
+		else 
+        {
 			return redirect('/login')->with('message','salah username atau salah password');
 		}
 	}
 	public function logout() {
 		Auth::logout();
-		return Redirect::to('login')->with('message','berhasil logout');
+		return redirect('login')
+            ->with([
+                'message' => 'berhasil keluar',
+                'alert-type' => 'alert-success',
+            ]);
 	}
 }

@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' => 'kasir'],function(){
+    Route::get('/',function(){
+        return redirect('/login');
+    });
+});
 Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@login');
 Route::any('/logout','LoginController@logout');

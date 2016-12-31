@@ -39,12 +39,6 @@
             z-index: 2000;
             display: none;
         }
-        .transaksi {
-            height: 400px;
-        }
-        .meja {
-            height: 200px;
-        }
     </style>
     <!-- Scripts -->
     <script>
@@ -57,14 +51,24 @@
     <header>@include('layouts.admin.header')</header>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 transaksi">
-                <div class="bg-success">
-                    &nbsp;
+            <div class="col-lg-8 col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Transaksi Billiard
+                    </div>
+                    <div class="panel-body">
+                        &nbsp;
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2">
-                <div class="bg-primary meja">
-                    &nbsp;
+            <div class="col-lg-4 col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Transaksi Non-Billiard
+                    </div>
+                    <div class="panel-body">
+                        &nbsp;
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,1 +1,1 @@
-&copy; Murrey APP 2016
+&copy; Murrey Billiard 2017

@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('password');
+            $table->enum('level',['Cashier','Admin','Super Admin'])->default('Cashier');
             $table->rememberToken();
             $table->timestamps();
         });

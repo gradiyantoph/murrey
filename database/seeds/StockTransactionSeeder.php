@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Transaction;
 
-class FnbTransactionTableSeeder extends Seeder
+class StockTransactionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,9 +13,9 @@ class FnbTransactionTableSeeder extends Seeder
     public function run()
     {
         $transaction = Transaction::find(1);
-        $transaction->fnbs()->attach(1, [
+        $transaction->stocks()->attach(1, [
+            'qty' => '2',
             'price' => '5000',
-            'qty' => '1',
         ]);
     }
 }

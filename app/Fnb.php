@@ -20,8 +20,8 @@ class Fnb extends Model
     /**
      * Relations
      */
-	public function transactions()
+	public function stocks()
 	{
-		return $this->belongsToMany('App\Transaction');
+		return $this->hasMany('App\Stock');
 	}
 }

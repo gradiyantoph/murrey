@@ -24,4 +24,8 @@ class Store extends Model
 	{
 		return $this->hasMany('App\Table');
 	}
+	public function stocks()
+	{
+		return $this->hasMany('App\Stock');
+	}
 }

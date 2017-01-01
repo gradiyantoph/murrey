@@ -19,6 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FareRentTableSeeder::class);
         $this->call(FnbsTableSeeder::class);
         $this->call(TransactionsTableSeeder::class);
-        $this->call(FnbTransactionTableSeeder::class);
+        $this->call(StockTransactionTableSeeder::class);
     }
 }

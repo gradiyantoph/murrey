@@ -26,8 +26,8 @@ class Transaction extends Model
 	{
 		return $this->belongsTo('App\User');
 	}
-    public function fnbs()
+    public function stocks()
     {
-        return $this->belongsToMany('App\Fnb');
+        return $this->belongsToMany('App\Stock');
     }
 }

@@ -1,3 +1,3 @@
-@extends('layouts.app')
+@extends('layouts.cashier')
 
 @section('title') Beranda @endsection

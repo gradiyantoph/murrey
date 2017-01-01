@@ -13,7 +13,19 @@
         </div>
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="home">Beranda</a></li>
+                <li><a href="{{ url('/home') }}">Beranda</a></li>
+                <li><a href="{{ url('/report') }}">Laporan</a></li>
+                <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Data Pusat <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/table') }}">Meja</a></li>
+                            <li><a href="{{ url('/fare') }}">Tarif</a></li>
+                            <li><a href="{{ url('/user') }}">Karyawan</a></li>
+                            <li><a href="{{ url('/store') }}">Lokasi</a></li>
+                        </ul>
+                    </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())

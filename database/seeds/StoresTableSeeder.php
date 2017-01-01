@@ -12,9 +12,9 @@ class StoresTableSeeder extends Seeder
      */
     public function run()
     {
-        Store::create([
-            'name' => 'Murrey Cipto',
-        ]);
+//        Store::create([
+//            'name' => 'Murrey Cipto',
+//        ]);
         Store::create([
             'name' => 'Murrey Pecilon',
         ]);

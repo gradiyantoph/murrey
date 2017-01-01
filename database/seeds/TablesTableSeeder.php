@@ -20,13 +20,13 @@ class TablesTableSeeder extends Seeder
             'store_id' => '1', 
             'number' => '2',
         ]);
-        Table::create([
-            'store_id' => '2', 
-            'number' => '1',
-        ]);
-        Table::create([
-            'store_id' => '2', 
-            'number' => '2',
-        ]);
+//        Table::create([
+//            'store_id' => '2',
+//            'number' => '1',
+//        ]);
+//        Table::create([
+//            'store_id' => '2',
+//            'number' => '2',
+//        ]);
     }
 }

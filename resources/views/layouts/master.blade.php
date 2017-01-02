@@ -40,6 +40,7 @@
             display: none;
         }
     </style>
+    @yield('style')
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -74,7 +75,7 @@
                 }
             });
         }
-        @yield('script')
     </script>
+    @yield('script')
 </body>
 </html>
